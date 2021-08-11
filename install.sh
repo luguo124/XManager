@@ -99,7 +99,7 @@ function checkport(){
 
 
 install_Xray() {
-checkport
+
 pre_install		
 if [ ! -d /etc/Xray ];then
 	mkdir -p /etc/Xray
@@ -123,6 +123,7 @@ if [ ! -f /usr/bin/Xray ];then
 fi
 	
 if [ $CertMode == "file" ];then	
+	checkport
 	install_acme	
 fi
 if [ -z "$(which docker)" ];then
