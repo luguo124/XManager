@@ -1,5 +1,13 @@
 ```
-CENTOS 7
+使用一键脚本安装
+配置文件路径：/etc/Xray 配置文件详见：配置文件说明
+
+bash <(curl -Ls https://raw.githubusercontent.com/xcode75/Xray/master/install.sh)
+
+```
+
+```
+Docker安装 - CENTOS 7
 -------------------------------
 cd /root && \
 rm -rf install.sh && \
@@ -11,7 +19,7 @@ bash install.sh
 
 
 ```
-UBUNTU 18/20
+Docker安装 - UBUNTU 18/20
 -------------------------------
 cd /root && \
 rm -rf install.sh && \
