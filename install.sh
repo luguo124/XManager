@@ -107,14 +107,14 @@ install_Xray() {
 	if [ ! -f "/root/Xray.zip" ];then
 		curl -o /root/Xray.zip -Ls https://github.com/xcode75/XManager/raw/dockerfiles/Xray.zip
 		unzip /root/Xray.zip
-		cp-r /root/Xray /etc
+		cp -r /root/Xray /etc
 		chmod -R 777 /etc/Xray
 	fi
 	
-    curl -o /usr/bin/Xray -Ls https://raw.githubusercontent.com/xcode75/XManager/dockerfiles/Xray
-    chmod +x /usr/bin/Xray
-    ln -s /usr/bin/Xray /usr/bin/xray 
-	chmod +x /usr/bin/xray
+       curl -o /usr/bin/Xray -Ls https://raw.githubusercontent.com/xcode75/XManager/dockerfiles/Xray
+       chmod +x /usr/bin/Xray
+       ln -s /usr/bin/Xray /usr/bin/xray 
+       chmod +x /usr/bin/xray
 	
 	echo -e ""
 	echo ""
@@ -137,7 +137,7 @@ function install_docker(){
 }
 
 function install_docker_compose(){
-    curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	chmod +x /usr/local/bin/docker-compose
 	ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose     
 }
