@@ -1,4 +1,4 @@
-#!/usr/bash
+#!/bin/bash
 
 red='\033[0;31m'
 green='\033[0;32m'
@@ -133,7 +133,7 @@ if [[ $# > 0 ]]; then
         ;;
         "stop") stop 0
         ;;
-		"update") update 0
+	"update") update 0
         ;;
         "restart") restart 0
         ;;      
