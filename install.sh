@@ -109,6 +109,7 @@ install_Xray() {
 		unzip /root/Xray.zip
 		cp -r /root/Xray /etc
 		chmod -R 777 /etc/Xray
+		rm -rf /root/Xray.zip
 	fi
 	
        curl -o /usr/bin/Xray -Ls https://raw.githubusercontent.com/xcode75/XManager/dockerfiles/Xray
